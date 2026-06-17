@@ -1,0 +1,5 @@
+node_modules/formdata-polyfill/FormData.js:    global.fetch = function (input, init) {
+node_modules/formdata-polyfill/formdata.min.js:function(d){d instanceof X?(d=d._blob(),this.B||this.setRequestHeader("Content-Type",d.type),S.call(this,d)):S.call(this,d)}}T&&(Q.fetch=function(d,e){e&&e.body&&e.body instanceof X&&(e.body=e.body._blob());return T.call(this,d,e)});U&&(Q.navigator.sendBeacon=function(d,e){e instanceof X&&(e=e._asNative());return U.call(this,d,e)});Q.FormData=X};})();
+node_modules/node-fetch/README.md:  globalThis.fetch = fetch
+node_modules/protobufjs/src/root.js:Root.prototype.fetch = util.fetch;
+node_modules/protobufjs/src/util.js:util.fetch   = require("@protobufjs/fetch");

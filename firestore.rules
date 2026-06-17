@@ -1,0 +1,55 @@
+// ===============================================================
+// Assumed Data Model
+// ===============================================================
+//
+// Collection: tasks
+// Fields:
+//   - title: string (required, 1-200 chars)
+//   - description: string (optional, 0-2000 chars)
+//   - status: string (required, enum: ['pending', 'in-progress', 'completed'])
+//   - priority: string (required, enum: ['low', 'medium', 'high'])
+//   - dueDate: string (optional, ISO 8601 format)
+//   - category: string (optional)
+//   - uid: string (required, immutable)
+//   - createdAt: string (required, ISO 8601 format, immutable)
+//   - updatedAt: string (required, ISO 8601 format)
+//
+// Collection: followups
+// Fields:
+//   - contactName: string (required, 1-100 chars)
+//   - notes: string (optional, 0-1000 chars)
+//   - followupDate: string (required, ISO 8601 format)
+//   - status: string (required, enum: ['scheduled', 'completed'])
+//   - uid: string (required, immutable)
+//   - createdAt: string (required, ISO 8601 format, immutable)
+//
+// Collection: categories
+// Fields:
+//   - name: string (required, 1-50 chars)
+//   - color: string (required, hex format)
+//   - uid: string (required, immutable)
+//
+// ===============================================================
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /tasks/{taskId} {
+      allow read, delete: if request.auth != null && (!("uid" in resource.data) || resource.data.uid == request.auth.uid);
+      allow create: if request.auth != null && request.resource.data.uid == request.auth.uid;
+      allow update: if request.auth != null && (!("uid" in resource.data) || resource.data.uid == request.auth.uid);
+    }
+    
+    match /followups/{followupId} {
+      allow read, delete: if request.auth != null && (!("uid" in resource.data) || resource.data.uid == request.auth.uid);
+      allow create: if request.auth != null && request.resource.data.uid == request.auth.uid;
+      allow update: if request.auth != null && (!("uid" in resource.data) || resource.data.uid == request.auth.uid);
+    }
+    
+    match /categories/{categoryId} {
+      allow read, delete: if request.auth != null && (!("uid" in resource.data) || resource.data.uid == request.auth.uid);
+      allow create: if request.auth != null && request.resource.data.uid == request.auth.uid;
+      allow update: if request.auth != null && (!("uid" in resource.data) || resource.data.uid == request.auth.uid);
+    }
+  }
+}

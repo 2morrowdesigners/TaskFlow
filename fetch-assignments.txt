@@ -1,0 +1,1 @@
+node_modules/@capacitor/android/capacitor/src/main/assets/native-bridge.js:                    window.fetch = async (resource, options) => {

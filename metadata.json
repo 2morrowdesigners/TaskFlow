@@ -1,0 +1,6 @@
+{
+  "name": "FocusFlow",
+  "description": "Professional personal CRM and task management workspace for deep focus and productivity.",
+  "requestFramePermissions": ["notifications"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

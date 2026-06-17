@@ -1,0 +1,98 @@
+node_modules/@google/genai/package.json:    "@types/node-fetch": "^2.6.13",
+node_modules/@google/genai/package.json:    "node-fetch": "^3.3.2",
+node_modules/electron-to-chromium/package.json:    "node-fetch": "^3.3.0",
+node_modules/fetch-blob/package.json:    "description": "Blob & File implementation in Node.js, originally from node-fetch.",
+node_modules/fetch-blob/package.json:    "repository": "https://github.com/node-fetch/fetch-blob.git",
+node_modules/fetch-blob/package.json:        "node-fetch"
+node_modules/fetch-blob/package.json:        "url": "https://github.com/node-fetch/fetch-blob/issues"
+node_modules/fetch-blob/package.json:    "homepage": "https://github.com/node-fetch/fetch-blob#readme",
+node_modules/fetch-blob/README.md:A Blob implementation in Node.js, originally from [node-fetch](https://github.com/node-fetch/node-fetch).
+node_modules/fetch-blob/README.md:An example of this is that our blob implementation can be constructed with parts coming from [BlobDataItem](https://github.com/node-fetch/fetch-blob/blob/8ef89adad40d255a3bbd55cf38b88597c1cd5480/from.js#L32) (aka a filepath) or from [buffer.Blob](https://nodejs.org/api/buffer.html#buffer_new_buffer_blob_sources_options), It dose not have to implement all the methods - just enough that it can be read/understood by our Blob implementation. The minium requirements is that it has `Symbol.toStringTag`, `size`, `slice()` and either a `stream()` or a `arrayBuffer()` method. If you then wrap it in our Blob or File `new Blob([blobDataItem])` then you get all of the other methods that should be implemented in a blob or file
+node_modules/fetch-blob/README.md:See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob) and [tests](https://github.com/node-fetch/fetch-blob/blob/master/test.js) for more details of how to use the Blob.
+node_modules/fetch-blob/README.md:[ci-image]: https://github.com/node-fetch/fetch-blob/workflows/CI/badge.svg
+node_modules/fetch-blob/README.md:[ci-url]: https://github.com/node-fetch/fetch-blob/actions
+node_modules/fetch-blob/README.md:[codecov-image]: https://flat.badgen.net/codecov/c/github/node-fetch/fetch-blob/master
+node_modules/fetch-blob/README.md:[codecov-url]: https://codecov.io/gh/node-fetch/fetch-blob
+node_modules/formdata-polyfill/package.json:    "node-fetch",
+node_modules/formdata-polyfill/README.md:- It's compatible with [node-fetch](https://github.com/node-fetch/node-fetch).
+node_modules/formdata-polyfill/README.md:- Only dependency it has is [fetch-blob](https://github.com/node-fetch/fetch-blob)
+node_modules/formdata-polyfill/README.md:import fetch from 'node-fetch'
+node_modules/formdata-polyfill/README.md:It's mainly for [node-fetch](https://github.com/node-fetch/node-fetch) and other http library to ease the process of serializing a FormData into a blob and just wish to deal with Blobs instead (Both Deno and Undici adapted a version of this [formDataToBlob](https://github.com/jimmywarting/FormData/blob/5ddea9e0de2fc5e246ab1b2f9d404dee0c319c02/formdata-to-blob.js) to the core and passes all WPT tests run by the browser itself)
+node_modules/gaxios/package.json:    "node-fetch": "^3.3.2"
+node_modules/gaxios/README.md:> An HTTP request client that provides an `axios` like interface over top of `node-fetch`.
+node_modules/gaxios/README.md:   * `node-fetch` by default.
+node_modules/lightningcss/package.json:    "node-fetch": "^3.1.0",
+node_modules/node-fetch/src/body.js:Body.prototype.buffer = deprecate(Body.prototype.buffer, 'Please use \'response.arrayBuffer()\' instead of \'response.buffer()\'', 'node-fetch#buffer');
+node_modules/node-fetch/src/body.js:		'https://github.com/node-fetch/node-fetch/issues/1000 (response)')}
+node_modules/node-fetch/src/body.js:	'https://github.com/node-fetch/node-fetch/issues/1167'
+node_modules/node-fetch/src/utils/is.js: * ref: https://github.com/node-fetch/node-fetch/issues/296#issuecomment-307598143
+node_modules/node-fetch/src/index.js:			throw new TypeError(`node-fetch cannot load ${url}. URL scheme "${parsedURL.protocol.replace(/:$/, '')}" is not supported.`);
+node_modules/node-fetch/src/index.js:					// 'data' is never emitted. See https://github.com/node-fetch/node-fetch/pull/903
+node_modules/node-fetch/src/request.js:	'https://github.com/node-fetch/node-fetch/issues/1000 (request)');
+node_modules/node-fetch/src/request.js:		// Normalize input and force URL to be encoded as UTF-8 (https://github.com/node-fetch/node-fetch/issues/245)
+node_modules/node-fetch/src/request.js:		headers.set('User-Agent', 'node-fetch');
+node_modules/node-fetch/package.json:  "name": "node-fetch",
+node_modules/node-fetch/package.json:    "url": "https://github.com/node-fetch/node-fetch.git"
+node_modules/node-fetch/package.json:    "url": "https://github.com/node-fetch/node-fetch/issues"
+node_modules/node-fetch/package.json:  "homepage": "https://github.com/node-fetch/node-fetch",
+node_modules/node-fetch/package.json:    "url": "https://opencollective.com/node-fetch"
+node_modules/node-fetch/README.md:	<a href="https://github.com/node-fetch/node-fetch/actions"><img src="https://github.com/node-fetch/node-fetch/workflows/CI/badge.svg?branch=master" alt="Build status"></a>
+node_modules/node-fetch/README.md:	<a href="https://coveralls.io/github/node-fetch/node-fetch"><img src="https://img.shields.io/coveralls/github/node-fetch/node-fetch" alt="Coverage status"></a>
+node_modules/node-fetch/README.md:	<a href="https://packagephobia.now.sh/result?p=node-fetch"><img src="https://badgen.net/packagephobia/install/node-fetch" alt="Current version"></a>
+node_modules/node-fetch/README.md:	<a href="https://www.npmjs.com/package/node-fetch"><img src="https://img.shields.io/npm/v/node-fetch" alt="Install size"></a>
+node_modules/node-fetch/README.md:	<a href="https://opencollective.com/node-fetch"><img src="https://opencollective.com/node-fetch/donate/button.png?color=blue" alt="Open Collective"></a>
+node_modules/node-fetch/README.md:**You might be looking for the [v2 docs](https://github.com/node-fetch/node-fetch/tree/2.x#readme)**
+node_modules/node-fetch/README.md:Instead of implementing `XMLHttpRequest` in Node.js to run browser-specific [Fetch polyfill](https://github.com/github/fetch), why not go from native `http` to `fetch` API directly? Hence, `node-fetch`, minimal code for a `window.fetch` compatible API on Node.js runtime.
+node_modules/node-fetch/README.md:See Jason Miller's [isomorphic-unfetch](https://www.npmjs.com/package/isomorphic-unfetch) or Leonardo Quixada's [cross-fetch](https://github.com/lquixada/cross-fetch) for isomorphic usage (exports `node-fetch` for server-side, `whatwg-fetch` for client-side).
+node_modules/node-fetch/README.md:npm install node-fetch
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:`node-fetch` from v3 is an ESM-only module - you are not able to import it with `require()`.
+node_modules/node-fetch/README.md:npm install node-fetch@2
+node_modules/node-fetch/README.md:Alternatively, you can use the async `import()` function from CommonJS to load `node-fetch` asynchronously:
+node_modules/node-fetch/README.md:const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+node_modules/node-fetch/README.md:} from 'node-fetch'
+node_modules/node-fetch/README.md:Using an old version of node-fetch? Check out the following files:
+node_modules/node-fetch/README.md:- [Changelog](https://github.com/node-fetch/node-fetch/releases)
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:Unlike browsers, you can access raw `Set-Cookie` headers manually using `Headers.raw()`. This is a `node-fetch` only API.
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:} from 'node-fetch'
+node_modules/node-fetch/README.md:node-fetch comes with a spec-compliant [FormData] implementations for posting
+node_modules/node-fetch/README.md:import fetch, { FormData, File, fileFrom } from 'node-fetch'
+node_modules/node-fetch/README.md:import fetch, { AbortError } from 'node-fetch';
+node_modules/node-fetch/README.md:See [test cases](https://github.com/node-fetch/node-fetch/blob/master/test/) for more examples.
+node_modules/node-fetch/README.md:	// The following properties are node-fetch extensions
+node_modules/node-fetch/README.md:| `User-Agent`        | `node-fetch`                                           |
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:The `redirect: 'manual'` option for node-fetch is different from the browser & specification, which
+node_modules/node-fetch/README.md:node-fetch gives you the typical [basic filtered response](https://fetch.spec.whatwg.org/#concept-filtered-response-basic) instead.
+node_modules/node-fetch/README.md:import fetch from 'node-fetch';
+node_modules/node-fetch/README.md:The following node-fetch extension properties are provided:
+node_modules/node-fetch/README.md:The following properties are not implemented in node-fetch at this moment:
+node_modules/node-fetch/README.md:Convenience property representing the response's type. node-fetch only supports `'default'` and `'error'` and does not make use of [filtered responses](https://fetch.spec.whatwg.org/#concept-filtered-response).
+node_modules/node-fetch/README.md:import {Headers} from 'node-fetch';
+node_modules/node-fetch/README.md:Data are encapsulated in the `Body` object. Note that while the [Fetch Standard][whatwg-fetch] requires the property to always be a WHATWG `ReadableStream`, in node-fetch it is a Node.js [`Readable` stream][node-readable].
+node_modules/node-fetch/README.md:import { Response } from 'node-fetch'
+node_modules/node-fetch/README.md:<small>_(node-fetch extension)_</small>
+node_modules/node-fetch/README.md:<small>_(node-fetch extension)_</small>
+node_modules/node-fetch/README.md:**Since `3.x` types are bundled with `node-fetch`, so you don't need to install any additional packages.**
+node_modules/node-fetch/README.md:npm install --save-dev @types/node-fetch@2.x
+node_modules/node-fetch/README.md:[error-handling.md]: https://github.com/node-fetch/node-fetch/blob/master/docs/ERROR-HANDLING.md
+node_modules/p-retry/readme.md:const fetch = require('node-fetch');
+node_modules/p-retry/index.d.ts:	import fetch from 'node-fetch';
+node_modules/undici-types/fetch.d.ts:// and https://github.com/node-fetch/node-fetch/blob/914ce6be5ec67a8bab63d68510aabf07cb818b6d/index.d.ts (MIT license)
+node_modules/.package-lock.json:        "node-fetch": "^3.3.2"
+node_modules/.package-lock.json:    "node_modules/node-fetch": {
+node_modules/.package-lock.json:      "resolved": "https://registry.npmjs.org/node-fetch/-/node-fetch-3.3.2.tgz",
+node_modules/.package-lock.json:        "url": "https://opencollective.com/node-fetch"
